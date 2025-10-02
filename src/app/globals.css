@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Mode - Base Colors */
+  --background: 240 20% 97%;
+  /* #f1f5f9 */
+  --foreground: 222 47% 11%;
+  /* #0f172a */
+
+  /* Brand Colors - Modern Teal & Indigo */
+  --primary: 173 80% 40%;
+  /* #0d9488 Teal */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 239 84% 67%;
+  /* #6366f1 Indigo */
+  --secondary-foreground: 0 0% 100%;
+
+  --success: 142 71% 45%;
+  /* #22c55e Green */
+  --success-foreground: 0 0% 100%;
+
+  --warning: 25 95% 53%;
+  /* #f97316 Orange */
+  --warning-foreground: 0 0% 100%;
+
+  --danger: 0 72% 51%;
+  /* #dc2626 Red */
+  --danger-foreground: 0 0% 100%;
+
+  --accent: 189 94% 43%;
+  /* #06b6d4 Cyan */
+  --accent-foreground: 0 0% 100%;
+
+  /* Additional UI Colors */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --muted: 240 20% 97%;
+  --muted-foreground: 215 16% 47%;
+  --input: 214 32% 91%;
+  --ring: 173 80% 40%;
+}
+
+.dark {
+  /* Dark Mode - Base Colors */
+  --background: 222 47% 11%;
+  /* #0f172a */
+  --foreground: 240 20% 97%;
+  /* #f1f5f9 */
+
+  /* Brand Colors - Lighter for dark mode */
+  --primary: 173 58% 48%;
+  /* #14b8a6 Lighter Teal */
+  --primary-foreground: 222 47% 11%;
+
+  --secondary: 239 70% 73%;
+  /* #818cf8 Lighter Indigo */
+  --secondary-foreground: 222 47% 11%;
+
+  --success: 142 69% 58%;
+  /* #4ade80 Lighter Green */
+  --success-foreground: 222 47% 11%;
+
+  --warning: 25 96% 61%;
+  /* #fb923c Lighter Orange */
+  --warning-foreground: 222 47% 11%;
+
+  --danger: 0 84% 70%;
+  /* #f87171 Lighter Red */
+  --danger-foreground: 222 47% 11%;
+
+  --accent: 189 85% 53%;
+  /* #22d3ee Lighter Cyan */
+  --accent-foreground: 222 47% 11%;
+
+  /* Additional UI Colors */
+  --card: 217 33% 17%;
+  /* #1e293b */
+  --card-foreground: 240 20% 97%;
+  --border: 217 33% 24%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --input: 217 33% 24%;
+  --ring: 173 58% 48%;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+
+  --color-danger: hsl(var(--danger));
+  --color-danger-foreground: hsl(var(--danger-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-border: hsl(var(--border));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
