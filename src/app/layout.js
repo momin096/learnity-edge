@@ -3,6 +3,8 @@ import "./globals.css";
 import ClickSpark from "@/components/ClickSpark";
 import { ThemeProvider } from "next-themes";
 import NavBar from "@/components/NavBar";
+import NextAuthProvider from "@/providers/NextAuthProvider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,17 +27,21 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <ClickSpark >
-            <NavBar />
-            {children}
-          </ClickSpark>
+          <NextAuthProvider>
+            <ClickSpark >
+              <NavBar />
+              {children}
+            </ClickSpark>
+          </NextAuthProvider>
         </ThemeProvider>
+
       </body>
     </html>
   );
